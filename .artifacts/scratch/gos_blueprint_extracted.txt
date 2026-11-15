@@ -1,0 +1,1141 @@
+--- PAGE 1 ---
+GOS — GUEST OPERATIONS SYSTEM 
+PRODUCT BLUEPRINT v1.1 
+Updated: 2 November 2026 
+Document Status: Working Product Blueprint​
+Product Category: Restaurant Guest Operations & Management System​
+Primary Users: Guest Relation Officer (GRO), Reservation Staff, Host / Guest Service, 
+Supervisor, Manager​
+Platform Direction: Mobile-first application​
+Initial Scope: Restaurant guest operations, reservation management, shift continuity, table 
+management, and operational data collection. 
+ 
+1. PRODUCT OVERVIEW 
+1.1 Product Definition 
+GOS (Guest Operations System) adalah sistem operasional restoran yang membantu tim Guest 
+Relation Officer (GRO) dan guest service mengelola seluruh aktivitas yang berhubungan 
+dengan customer, mulai dari inquiry, reservation, arrival, seating, visit, hingga daily closing. 
+GOS juga berfungsi sebagai sistem pencatatan aktivitas operasional dan kesinambungan 
+pekerjaan antarpegawai maupun antar-shift. 
+GOS menangkap data aktual pada titik interaksi antara restoran dan customer. 
+1.2 Core Philosophy 
+Capture the Guest Journey at the Point of Interaction. 
+Setiap interaksi dengan customer harus dapat dicatat, dikelola, dan dilanjutkan oleh anggota tim 
+berikutnya tanpa kehilangan informasi. 
+GOS bukan sekadar reservation management system, melainkan sistem yang membantu 
+restoran menjaga: 
+
+--- PAGE 2 ---
+●​ Guest information. 
+●​ Reservation management. 
+●​ Guest experience. 
+●​ Table and seating operations. 
+●​ Daily operational activities. 
+●​ Staff accountability. 
+●​ Shift continuity. 
+●​ Operational reporting. 
+1.3 Core Value 
+GOS memberikan tiga nilai utama: 
+1.​ Guest Management: Memastikan informasi dan riwayat customer tercatat dengan baik. 
+2.​ Operational Continuity: Memastikan pekerjaan tidak terhenti atau kehilangan konteks 
+ketika terjadi pergantian shift. 
+3.​ Operational Visibility: Memberikan gambaran kondisi reservation, guest, table, dan 
+aktivitas operasional secara jelas. 
+ 
+2. POSITIONING WITHIN THE 
+RESTAURANT TECHNOLOGY 
+ECOSYSTEM 
+GOS merupakan bagian dari ekosistem teknologi restoran bersama RMIP dan POS. 
+2.1 System Roles 
+GOS — Guest Operations System 
+Mengelola: 
+●​ Guest. 
+●​ Reservation. 
+●​ Inquiry. 
+●​ Arrival. 
+●​ Walk-in. 
+●​ Visit. 
+●​ Table assignment. 
+
+--- PAGE 3 ---
+●​ Shift and handover. 
+●​ Daily operational closing. 
+RMIP — Restaurant Marketing Intelligence Platform 
+Mengelola: 
+●​ Marketing campaigns. 
+●​ Marketing calendar. 
+●​ Promotions and events. 
+●​ Campaign targets. 
+●​ Marketing performance. 
+●​ Customer relationship management. 
+●​ Customer segmentation. 
+●​ Marketing intelligence. 
+POS / Finance System 
+Mengelola: 
+●​ Transactions. 
+●​ Payment records. 
+●​ Sales. 
+●​ Revenue. 
+●​ Refunds. 
+●​ Financial verification. 
+2.2 Integrated Business Journey 
+Marketing → Campaign → Customer Inquiry → Reservation → Guest Arrival → Visit → 
+Transaction → Revenue → Marketing Intelligence. 
+GOS menjadi operational layer yang menangkap aktivitas customer dan hasil operasionalnya. 
+RMIP menjadi intelligence layer yang menghubungkan aktivitas marketing dengan hasil bisnis. 
+POS / Finance menjadi sumber data transaksi dan revenue yang tervalidasi. 
+2.3 Independent Operational Capability 
+GOS harus tetap dapat beroperasi secara mandiri meskipun RMIP atau POS belum 
+terintegrasi. 
+Integrasi meningkatkan kemampuan analisis dan intelligence, tetapi tidak boleh menjadi 
+ketergantungan untuk menjalankan operasi dasar GOS. 
+
+--- PAGE 4 ---
+ 
+3. USER ROLES & ACCESS 
+3.1 Primary Roles 
+1. GRO (Guest Relation Officer) 
+Pengguna utama GOS. 
+Tanggung jawab: 
+●​ Menerima inquiry. 
+●​ Mengelola reservation. 
+●​ Mencatat interaksi WhatsApp dan telepon. 
+●​ Melakukan follow-up. 
+●​ Mengelola guest information. 
+●​ Menangani arrival. 
+●​ Mengelola walk-in. 
+●​ Melakukan table assignment. 
+●​ Memperbarui status pekerjaan. 
+●​ Melakukan shift handover. 
+●​ Mengisi daily closing. 
+2. Reservation Staff 
+Mengelola inquiry, reservation, confirmation, dan customer communication. 
+3. Host / Guest Service 
+Menangani kedatangan customer, seating, table assignment, dan guest experience. 
+4. Supervisor 
+Mengawasi operasional, reservation, pekerjaan GRO, shift handover, dan daily closing. 
+5. Manager 
+Memiliki akses pengawasan dan pengelolaan operasional outlet sesuai permission. 
+6. Admin 
+Mengelola konfigurasi sistem, user, organization, outlet, dan hak akses. 
+
+--- PAGE 5 ---
+3.2 User Identity 
+Setiap pengguna wajib memiliki akun masing-masing. 
+Sistem harus mencatat: 
+●​ User ID. 
+●​ Name. 
+●​ Role. 
+●​ Organization. 
+●​ Outlet. 
+●​ Login activity. 
+●​ Shift assignment. 
+●​ Activity history. 
+●​ Timestamp. 
+Setiap aktivitas operasional harus memiliki identitas pengguna yang melakukan tindakan 
+tersebut. 
+Tidak diperbolehkan menggunakan satu akun bersama untuk beberapa GRO karena sistem 
+membutuhkan accountability per individu. 
+ 
+4. APPLICATION NAVIGATION 
+GOS menggunakan lima tab navigasi utama. 
+TAB 1 — TODAY 
+Pusat operasional harian untuk GRO. 
+Tujuan utama: 
+"What do I need to do today?" 
+Komponen: 
+A. Daily Overview 
+●​ Today's Reservations. 
+●​ Expected Guests. 
+●​ Confirmed Reservations. 
+
+--- PAGE 6 ---
+●​ Pending Reservations. 
+●​ Expected Arrivals. 
+●​ Walk-in Count. 
+●​ Follow-up Pending. 
+●​ Special Requests. 
+●​ Upcoming Events. 
+B. My Tasks 
+Menampilkan pekerjaan yang menjadi tanggung jawab pengguna. 
+Contoh: 
+●​ Confirm reservation. 
+●​ Follow up customer. 
+●​ Confirm guest requirements. 
+●​ Check special requests. 
+●​ Prepare VIP arrival. 
+●​ Follow up event inquiry. 
+C. Shift Tasks 
+Menampilkan pekerjaan yang harus diselesaikan selama shift berlangsung. 
+D. Handover Tasks 
+Menampilkan pekerjaan yang diteruskan dari shift sebelumnya. 
+E. Today's Calendar 
+Menampilkan: 
+●​ Reservation schedule. 
+●​ Events. 
+●​ Corporate bookings. 
+●​ Wedding meetings. 
+●​ Special occasions. 
+●​ Important operational schedules. 
+F. Campaign & Promotion Briefing 
+Informasi yang diterima dari RMIP: 
+●​ Active campaigns. 
+●​ Promotions. 
+
+--- PAGE 7 ---
+●​ Campaign period. 
+●​ Campaign objectives. 
+●​ Campaign targets. 
+●​ Guest identification or promo code. 
+●​ Required GRO actions. 
+●​ Operational instructions. 
+G. Quick Actions 
+●​ New Reservation. 
+●​ New Walk-in. 
+●​ Log Inquiry. 
+●​ Log Phone Call. 
+●​ Create Follow-up. 
+●​ View Tables. 
+●​ Shift Handover. 
+Today menjadi halaman utama setelah pengguna berhasil login. 
+ 
+TAB 2 — RESERVATIONS 
+Pusat pengelolaan inquiry dan reservation. 
+A. Reservation Management 
+Fitur: 
+●​ Create Reservation. 
+●​ Edit Reservation. 
+●​ Search Reservation. 
+●​ Filter Reservation. 
+●​ View Reservation Details. 
+●​ Update Reservation Status. 
+●​ Cancel Reservation. 
+●​ Reservation History. 
+B. Reservation Information 
+Setiap reservation memiliki: 
+●​ Reservation ID. 
+●​ Guest ID (jika teridentifikasi). 
+
+--- PAGE 8 ---
+●​ Guest Name. 
+●​ Contact Number. 
+●​ Reservation Date. 
+●​ Reservation Time. 
+●​ Reserved Guest Count. 
+●​ Reservation Source. 
+●​ Campaign ID (optional). 
+●​ Occasion. 
+●​ Special Request. 
+●​ Table Assignment (optional). 
+●​ Created By. 
+●​ Current Owner. 
+●​ Status. 
+C. Reservation Sources 
+●​ WhatsApp. 
+●​ Phone Call. 
+●​ Instagram. 
+●​ Website. 
+●​ Walk-in (tidak dibuat sebagai reservation palsu). 
+●​ Referral. 
+●​ Travel Agent. 
+●​ Corporate. 
+●​ Other. 
+●​ Unknown. 
+D. Reservation Status Lifecycle 
+●​ New. 
+●​ Pending. 
+●​ Confirmed. 
+●​ Arrived. 
+●​ Completed. 
+●​ Cancelled. 
+●​ No Show. 
+Setiap perubahan status harus tercatat dalam status history. 
+E. Inquiry Management 
+Inquiry adalah interaksi awal customer sebelum atau tanpa terbentuknya reservation. 
+GRO dapat mencatat inquiry yang masuk melalui WhatsApp, telepon, Instagram, atau channel 
+lainnya. 
+
+--- PAGE 9 ---
+Informasi: 
+●​ Inquiry ID. 
+●​ Customer Information. 
+●​ Contact Channel. 
+●​ Inquiry Time. 
+●​ Inquiry Purpose. 
+●​ Requested Date and Time. 
+●​ Requested Guest Count. 
+●​ Notes. 
+●​ Assigned User. 
+●​ Inquiry Status. 
+●​ Follow-up Requirement. 
+Inquiry dapat berakhir menjadi: 
+●​ Reservation Created. 
+●​ Follow-up Required. 
+●​ Information Only. 
+●​ Not Converted. 
+●​ Cancelled. 
+F. WhatsApp & Phone Logging 
+Pada MVP, GOS tidak harus terhubung langsung ke WhatsApp atau sistem telepon. 
+GRO tetap berkomunikasi melalui aplikasi eksternal, kemudian mencatat hasil interaksi ke 
+GOS. 
+GOS menyimpan: 
+●​ Customer. 
+●​ Channel. 
+●​ Interaction Time. 
+●​ Interaction Summary. 
+●​ Result. 
+●​ Follow-up Date. 
+●​ Responsible User. 
+Tujuannya agar interaksi customer tidak hilang di percakapan pribadi masing-masing GRO. 
+ 
+TAB 3 — GUESTS 
+
+--- PAGE 10 ---
+Pusat data dan profil customer. 
+A. Guest Profile 
+Setiap Guest memiliki: 
+●​ Guest ID. 
+●​ Full Name. 
+●​ WhatsApp / Phone Number. 
+●​ Email (optional). 
+●​ Birthday (optional). 
+●​ First Visit. 
+●​ Last Visit. 
+●​ Total Reservations. 
+●​ Total Visits. 
+●​ Guest Source. 
+●​ Preferences. 
+●​ Special Notes. 
+●​ Guest History. 
+B. Guest History 
+Menampilkan: 
+●​ Reservation History. 
+●​ Visit History. 
+●​ Walk-in History. 
+●​ Previous Table. 
+●​ Favorite Table. 
+●​ Special Requests. 
+●​ Campaign Reference (jika tersedia). 
+C. Guest Classification 
+Kategori awal: 
+●​ New Guest. 
+●​ Returning Guest. 
+●​ Frequent Guest. 
+●​ Inactive Guest. 
+Kriteria dan threshold klasifikasi dapat dikonfigurasi berdasarkan kebutuhan bisnis. 
+Klasifikasi harus berdasarkan aktivitas aktual, bukan sekadar jumlah reservation. 
+
+--- PAGE 11 ---
+D. Guest Identity 
+Guest ID menjadi identitas utama customer. 
+Nomor telepon dapat digunakan sebagai supporting identifier untuk pencocokan, tetapi sistem 
+harus menghindari penggabungan profil yang berbeda tanpa verifikasi yang memadai. 
+E. Anonymous / Unidentified Guest 
+Customer tetap dapat dicatat sebagai pengunjung meskipun tidak memberikan nama atau 
+nomor telepon. 
+Data operasional seperti jumlah tamu, waktu kunjungan, dan meja tetap dapat dicatat. 
+ 
+TAB 4 — CLOSING 
+Pusat pelaporan operasional harian. 
+Daily Closing merupakan laporan aktivitas guest operations, bukan financial closing. 
+A. Daily Operational Summary 
+●​ Total Reservations. 
+●​ Confirmed Reservations. 
+●​ Arrived Reservations. 
+●​ Completed Visits. 
+●​ Cancelled Reservations. 
+●​ No Show. 
+●​ Walk-in Count. 
+●​ Reserved Guest Count. 
+●​ Actual Guest Count. 
+●​ New Guests. 
+●​ Returning Guests. 
+B. Source Summary 
+Menampilkan jumlah customer berdasarkan source: 
+●​ WhatsApp. 
+●​ Phone. 
+●​ Instagram. 
+●​ Walk-in. 
+●​ Referral. 
+
+--- PAGE 12 ---
+●​ Corporate. 
+●​ Other. 
+C. Campaign Summary 
+Menampilkan reservation dan visit yang memiliki campaign reference. 
+Campaign linkage tidak otomatis membuktikan bahwa campaign menyebabkan transaksi atau 
+revenue. 
+D. Closing Submission 
+GRO melakukan review dan submission. 
+Closing memiliki status: 
+●​ Draft. 
+●​ Submitted. 
+●​ Reviewed. 
+●​ Returned for Correction (jika diperlukan). 
+Supervisor atau Manager dapat melakukan review. 
+Revenue hanya ditampilkan apabila tersedia dari sumber data transaksi yang terpercaya, 
+misalnya POS atau Finance. 
+ 
+TAB 5 — MORE 
+Berisi fitur pendukung dan pengaturan. 
+Rancangan submenu: 
+A. Shift Management 
+●​ Shift Schedule. 
+●​ Current Shift. 
+●​ On-duty Users. 
+●​ Shift History. 
+●​ Shift Status. 
+B. Handover 
+●​ Create Handover. 
+
+--- PAGE 13 ---
+●​ Incoming Handover. 
+●​ Outgoing Handover. 
+●​ Handover History. 
+●​ Open Tasks. 
+C. Table Management 
+●​ Table Layout. 
+●​ Table Status. 
+●​ Table Assignment. 
+●​ Seating History. 
+●​ Table Configuration. 
+D. Campaigns 
+Informasi campaign yang dipublikasikan dari RMIP. 
+E. Calendar & Events 
+Informasi kalender operasional dan event dari RMIP. 
+F. Settings 
+●​ User Profile. 
+●​ Outlet Information. 
+●​ Notification Preferences. 
+●​ Language. 
+●​ Account Settings. 
+ 
+5. LOGIN & USER IDENTITY 
+5.1 Login 
+Sebelum masuk aplikasi, setiap GRO wajib melakukan login menggunakan akun individual. 
+Setelah login, sistem mengidentifikasi: 
+●​ User. 
+●​ Role. 
+●​ Organization. 
+
+--- PAGE 14 ---
+●​ Outlet. 
+●​ Shift assignment. 
+●​ Permission. 
+5.2 Operational Accountability 
+Setiap aktivitas harus memiliki metadata: 
+●​ User ID. 
+●​ Timestamp. 
+●​ Outlet ID. 
+●​ Shift ID. 
+●​ Activity Type. 
+●​ Related Record ID. 
+Contoh: 
+09:15 — GRO A menerima inquiry WhatsApp. 
+09:18 — GRO A membuat reservation. 
+09:20 — GRO A mencatat special request. 
+10:00 — GRO A menyelesaikan follow-up. 
+5.3 Shift Status 
+Sistem perlu mendukung status pengguna: 
+●​ Scheduled. 
+●​ On Duty. 
+●​ Break. 
+●​ Off Duty. 
+Detail aturan perubahan status dan integrasi dengan jadwal kerja akan dibahas lebih lanjut. 
+ 
+6. SHIFT & HANDOVER SYSTEM 
+Status: LOCKED — Core Product Direction 
+Shift & Handover merupakan salah satu fondasi penting GOS. 
+
+--- PAGE 15 ---
+Tujuannya memastikan pekerjaan tetap berjalan meskipun terjadi pergantian personel. 
+6.1 Shift Start 
+Ketika GRO memulai shift: 
+1.​ User login. 
+2.​ Sistem mengidentifikasi shift. 
+3.​ User melihat Shift Briefing. 
+4.​ Sistem menampilkan handover dari shift sebelumnya. 
+5.​ User mengetahui tugas dan tanggung jawab yang harus dilanjutkan. 
+6.2 Shift Briefing 
+Contoh informasi: 
+●​ Shift Schedule. 
+●​ Expected Guests. 
+●​ Today's Reservations. 
+●​ Important Reservations. 
+●​ Pending Follow-ups. 
+●​ Upcoming Events. 
+●​ Campaign Information. 
+●​ Operational Notes. 
+●​ Incoming Handover. 
+6.3 Shift Handover 
+Ketika GRO mengakhiri shift, sistem menyediakan proses End Shift / Handover. 
+Informasi handover: 
+Completed Activities 
+●​ Reservations handled. 
+●​ Inquiries received. 
+●​ WhatsApp interactions. 
+●​ Phone calls. 
+●​ Follow-ups completed. 
+Open Items 
+●​ Pending confirmation. 
+
+--- PAGE 16 ---
+●​ Unanswered inquiries. 
+●​ Pending customer follow-up. 
+●​ Special requests. 
+●​ Incomplete arrangements. 
+●​ Important guest information. 
+Handover Notes 
+Catatan khusus untuk shift berikutnya. 
+6.4 Incoming Shift 
+GRO yang memulai shift berikutnya mendapatkan Incoming Handover. 
+Informasi yang ditampilkan: 
+●​ Previous Shift. 
+●​ Handover From. 
+●​ Open Items. 
+●​ Important Notes. 
+●​ Pending Tasks. 
+●​ Current Status. 
+GRO dapat melanjutkan pekerjaan tanpa harus mencari informasi dari percakapan atau 
+bertanya ulang kepada personel sebelumnya. 
+6.5 Task Ownership 
+Setiap pekerjaan harus memiliki riwayat kepemilikan. 
+Contoh: 
+●​ Created By: GRO A. 
+●​ Previous Owner: GRO A. 
+●​ Transferred By: GRO A. 
+●​ Current Owner: GRO B. 
+●​ Completed By: GRO B. 
+Sistem tidak boleh menghapus informasi siapa yang pertama kali menangani pekerjaan. 
+6.6 Handover Principles 
+●​ Handover harus menyimpan konteks pekerjaan. 
+
+--- PAGE 17 ---
+●​ Open tasks harus tetap terlihat sampai selesai atau ditutup secara sah. 
+●​ Perubahan owner harus tercatat. 
+●​ Aktivitas setiap user harus dapat ditelusuri. 
+●​ Handover tidak boleh menghapus atau mengubah sejarah aktivitas sebelumnya. 
+●​ Shift berikutnya harus dapat melanjutkan pekerjaan. 
+6.7 Unresolved Handover Scenarios 
+Detail berikut masih perlu dirancang: 
+●​ Apa yang terjadi jika GRO lupa melakukan handover? 
+●​ Apakah Supervisor dapat melakukan forced handover? 
+●​ Bagaimana jika user tidak hadir pada shift berikutnya? 
+●​ Bagaimana penanganan task yang tidak memiliki owner? 
+●​ Bagaimana proses eskalasi pekerjaan yang terlambat? 
+ 
+7. TABLE MANAGEMENT & TABLE 
+INTELLIGENCE 
+Status: Concept Direction Accepted — Detailed Design Pending 
+GOS perlu menyediakan visualisasi layout meja restoran sehingga GRO dapat mengetahui 
+kondisi seating secara cepat. 
+7.1 Table Layout 
+Setiap outlet dapat memiliki layout restoran sesuai kondisi fisik sebenarnya. 
+Contoh area: 
+●​ Indoor. 
+●​ Outdoor. 
+●​ VIP. 
+●​ Smoking Area. 
+●​ Non-Smoking Area. 
+●​ Private Room. 
+●​ Window Area. 
+Setiap meja memiliki: 
+
+--- PAGE 18 ---
+●​ Table ID. 
+●​ Table Name / Number. 
+●​ Area. 
+●​ Capacity. 
+●​ Position / Layout Coordinates. 
+●​ Table Features. 
+●​ Operational Status. 
+7.2 Table Status 
+Status awal: 
+Available​
+Meja kosong dan siap digunakan. 
+Reserved​
+Meja sudah dialokasikan untuk reservation. 
+Occupied​
+Meja sedang digunakan oleh customer. 
+Cleaning​
+Customer sudah selesai, tetapi meja belum siap digunakan kembali. 
+Blocked​
+Meja tidak dapat digunakan sementara karena alasan operasional. 
+Available tidak boleh disamakan dengan sekadar tidak ditempati. Meja harus benar-benar siap 
+digunakan. 
+7.3 Table Assignment 
+Reservation dapat memiliki Table Assignment, tetapi tidak wajib sejak reservation dibuat. 
+Contoh: 
+Reservation: 
+●​ Guest: Budi Santoso. 
+●​ Time: 19:00. 
+●​ Pax: 4. 
+●​ Table: Unassigned. 
+GRO dapat mengalokasikan meja sebelum kedatangan atau ketika customer tiba. 
+
+--- PAGE 19 ---
+7.4 Seating Workflow 
+Reservation / Walk-in → Table Assignment → Guest Seated → Occupied → Guest Leaves → 
+Cleaning → Available. 
+Perubahan status meja harus memiliki timestamp dan riwayat aktivitas. 
+7.5 Table Information 
+GRO dapat melihat: 
+●​ Table ID. 
+●​ Guest Name. 
+●​ Reservation Time. 
+●​ Guest Count. 
+●​ Seating Time. 
+●​ Current Status. 
+●​ Special Request (jika relevan). 
+Contoh: 
+T05 — Occupied​
+Budi Santoso​
+4 / 4 Guests​
+Seated: 19:12. 
+T06 — Reserved​
+Sarah Wijaya​
+19:30​
+6 Guests. 
+T07 — Available​
+Capacity: 2. 
+7.6 Walk-in Integration 
+GRO dapat membuat Walk-in melalui Today atau melalui Table Management. 
+Ketika Walk-in dibuat: 
+1.​ GRO mencatat jumlah tamu. 
+2.​ Guest profile dihubungkan jika tersedia. 
+3.​ GRO memilih meja. 
+4.​ Sistem mencatat Visit. 
+
+--- PAGE 20 ---
+5.​ Table berubah menjadi Occupied. 
+Walk-in tidak perlu dibuat sebagai Reservation palsu. 
+7.7 Table Intelligence — Future Development 
+Setelah data penggunaan meja terkumpul, GOS dapat mengembangkan analisis: 
+●​ Most Popular Tables. 
+●​ Favorite Tables. 
+●​ Table Utilization. 
+●​ Average Occupancy Duration. 
+●​ Reservation Preference. 
+●​ Low Utilization Tables. 
+●​ Table Performance. 
+●​ Seating Patterns. 
+●​ Table Revenue Contribution (memerlukan integrasi POS). 
+Favorite Table 
+Sistem dapat mengenali meja yang secara eksplisit atau berulang kali dipilih customer. 
+Underutilized / Low Utilization Table 
+Sistem dapat mengidentifikasi meja yang jarang digunakan dibandingkan ketersediaannya. 
+Analisis harus membedakan: 
+●​ Low Usage. 
+●​ Low Demand. 
+●​ Unavailable. 
+Meja yang tidak digunakan karena operational issue tidak boleh langsung dikategorikan sebagai 
+meja yang tidak diminati. 
+Table Intelligence merupakan pengembangan lanjutan dan tidak menjadi syarat untuk MVP 
+awal. 
+ 
+8. WALK-IN MANAGEMENT 
+Walk-in merupakan customer yang datang tanpa reservation sebelumnya. 
+
+--- PAGE 21 ---
+8.1 Entry Point 
+Walk-in dapat diinput melalui: 
+1.​ Today — Quick Action: New Walk-in. 
+2.​ Table Management — memilih meja kosong lalu membuat Walk-in. 
+8.2 Walk-in Data 
+Informasi: 
+●​ Walk-in ID. 
+●​ Guest ID (optional). 
+●​ Guest Name (optional). 
+●​ Contact Number (optional). 
+●​ Actual Guest Count. 
+●​ Arrival Time. 
+●​ Source. 
+●​ Table ID. 
+●​ Created By. 
+●​ Visit Status. 
+8.3 Anonymous Walk-in 
+GOS tetap harus menerima pencatatan Walk-in tanpa identitas lengkap. 
+Minimal data: 
+●​ Walk-in ID. 
+●​ Arrival Time. 
+●​ Guest Count. 
+●​ Table ID (jika ada). 
+●​ User ID. 
+Hal ini memastikan seluruh traffic customer tetap tercatat tanpa memaksa pengumpulan data 
+pribadi. 
+ 
+9. VISIT MANAGEMENT 
+
+--- PAGE 22 ---
+Visit merupakan catatan aktual bahwa customer benar-benar datang dan menggunakan 
+layanan restoran. 
+Visit berbeda dari Reservation. 
+9.1 Visit Creation 
+Visit dapat berasal dari: 
+●​ Confirmed Reservation yang melakukan arrival. 
+●​ Walk-in. 
+9.2 Visit Information 
+●​ Visit ID. 
+●​ Guest ID (optional). 
+●​ Reservation ID (optional). 
+●​ Walk-in ID (optional). 
+●​ Arrival Time. 
+●​ Actual Guest Count. 
+●​ Table ID. 
+●​ Assigned GRO. 
+●​ Visit Status. 
+●​ Completion Time. 
+9.3 Important Rules 
+●​ Reservation tidak otomatis berarti Visit. 
+●​ Reserved Guest Count tidak sama dengan Actual Guest Count. 
+●​ Walk-in dapat menghasilkan Visit tanpa Reservation. 
+●​ Visit tidak otomatis berarti Transaction. 
+●​ Revenue harus berasal dari sumber transaksi yang tervalidasi. 
+ 
+10. DAILY CLOSING & OPERATIONAL 
+REPORTING 
+Daily Closing berfungsi sebagai rekap aktivitas guest operations berdasarkan outlet dan 
+business date. 
+
+--- PAGE 23 ---
+10.1 Core Metrics 
+●​ Total Reservations. 
+●​ Confirmed Reservations. 
+●​ Arrivals. 
+●​ Completed Visits. 
+●​ Cancellations. 
+●​ No Shows. 
+●​ Walk-ins. 
+●​ Reserved Guests. 
+●​ Actual Guests. 
+●​ New Guests. 
+●​ Returning Guests. 
+10.2 Source and Campaign Reporting 
+GOS mencatat source dan campaign reference jika tersedia. 
+Data tersebut dapat dikirim ke RMIP untuk analisis. 
+GOS tidak boleh menyimpulkan bahwa suatu campaign menghasilkan revenue hanya karena 
+customer memiliki campaign reference. 
+10.3 Financial Data Boundary 
+GRO tidak bertanggung jawab memasukkan atau memverifikasi revenue pada MVP. 
+POS / Finance menjadi sumber utama data transaksi dan revenue. 
+ 
+11. GOS ↔ RMIP INTEGRATION 
+Status: LOCKED — Core Integration Principle 
+11.1 Integration Philosophy 
+GOS menjadi Guest Operational Database. 
+RMIP menjadi Customer Relationship & Marketing Intelligence. 
+
+--- PAGE 24 ---
+Keduanya terhubung melalui Single Guest Identity. 
+11.2 Single Guest Identity 
+GOS dan RMIP menggunakan Guest ID yang sama. 
+Contoh: 
+GST-001 — Budi Santoso. 
+RMIP tidak perlu membuat identitas Guest terpisah atau meminta marketing team memasukkan 
+ulang data Guest. 
+Identity matching harus berhati-hati agar tidak terjadi penggabungan profil customer yang 
+berbeda. 
+11.3 GOS Data Sent to RMIP 
+●​ Guest Identity Reference. 
+●​ Guest Profile (sesuai permission dan consent). 
+●​ Reservation History. 
+●​ Visit History. 
+●​ Walk-in History. 
+●​ Guest Classification. 
+●​ Guest Source. 
+●​ Campaign Linkage. 
+●​ Actual Guest Count. 
+●​ Visit Date. 
+●​ Guest Preferences yang relevan dan diizinkan. 
+11.4 RMIP Data Sent to GOS 
+●​ Published Campaigns. 
+●​ Campaign ID. 
+●​ Campaign Name. 
+●​ Campaign Period. 
+●​ Campaign Objective. 
+●​ Campaign Target. 
+●​ Promotion and Offers. 
+●​ Calendar and Events. 
+●​ Operational Notes. 
+●​ GRO Instructions. 
+●​ Campaign Briefing. 
+
+--- PAGE 25 ---
+GRO dapat melihat informasi dan instruksi yang dipublikasikan, tetapi tidak mengubah 
+campaign plan atau target marketing milik Manager. 
+11.5 Data Ownership 
+Data 
+System of 
+Record 
+Guest Identity & Profile 
+GOS 
+Reservation 
+GOS 
+Visit & Walk-in History 
+GOS 
+Guest Preferences 
+GOS 
+Campaign 
+RMIP 
+Campaign Target 
+RMIP 
+Marketing Segmentation RMIP 
+Campaign Analysis 
+RMIP 
+Marketing Performance 
+RMIP 
+Transaction & Revenue 
+POS / Finance 
+11.6 CRM Capabilities in RMIP 
+RMIP menggunakan data GOS untuk: 
+●​ Customer Segmentation. 
+●​ New / Returning / Frequent / Inactive Customer Analysis. 
+●​ Visit Frequency. 
+●​ Customer Retention. 
+●​ Customer Lifetime Value (jika data transaksi tersedia). 
+●​ Campaign Audience. 
+●​ Campaign Response Analysis. 
+●​ Customer Intelligence. 
+11.7 Integration Flow 
+
+--- PAGE 26 ---
+RMIP creates Campaign → Campaign Published → GOS receives Campaign Brief → Customer 
+Inquiry → Reservation → Arrival → Visit → POS Transaction → RMIP Marketing Performance 
+Analysis. 
+11.8 Privacy and Data Governance 
+●​ Role-based data access. 
+●​ Guest consent for marketing use. 
+●​ Data correction. 
+●​ Data deletion. 
+●​ Data provenance. 
+●​ Audit history. 
+●​ Organization and outlet data isolation. 
+ 
+12. DATA ARCHITECTURE & CORE 
+OBJECTS 
+12.1 Core Objects 
+1.​ Organization. 
+2.​ Outlet. 
+3.​ User. 
+4.​ Role. 
+5.​ Shift. 
+6.​ Handover. 
+7.​ Task. 
+8.​ Guest. 
+9.​ Inquiry. 
+10.​Reservation. 
+11.​Visit. 
+12.​Walk-in. 
+13.​Table. 
+14.​Table Area. 
+15.​Table Assignment. 
+16.​Campaign Reference. 
+17.​Calendar Event Reference. 
+18.​Daily Closing. 
+19.​Activity Log. 
+
+--- PAGE 27 ---
+20.​Notification. 
+12.2 Core Relationships 
+Organization → Outlet → User. 
+Outlet → Shift → Handover. 
+User → Task → Activity Log. 
+Guest → Inquiry → Reservation → Visit. 
+Guest → Walk-in → Visit. 
+Outlet → Table Area → Table. 
+Reservation / Walk-in → Table Assignment. 
+RMIP Campaign → Campaign Reference → Inquiry / Reservation / Visit. 
+Outlet → Daily Closing. 
+12.3 Data Integrity Rules 
+●​ Guest is not Reservation. 
+●​ Reservation is not Visit. 
+●​ Reserved Guests are not Actual Guests. 
+●​ Walk-in is a direct guest arrival, not a fabricated Reservation. 
+●​ Source is not Campaign. 
+●​ Campaign Linkage is not Attribution Proof. 
+●​ Visit is not Transaction. 
+●​ Transaction is not automatically Revenue until validated. 
+●​ Daily Closing is not Financial Closing. 
+●​ Guest ID is the primary guest identity. 
+●​ Every operational activity must be attributable to a user and timestamp. 
+●​ Table status must reflect actual operational conditions. 
+●​ Handover must preserve task ownership history. 
+ 
+13. MVP SCOPE 
+
+--- PAGE 28 ---
+13.1 MVP Core Modules 
+1. Authentication & User Identity 
+●​ Login. 
+●​ User roles. 
+●​ Outlet assignment. 
+●​ Activity logging. 
+2. Today 
+●​ Daily Overview. 
+●​ Tasks. 
+●​ Follow-ups. 
+●​ Shift Briefing. 
+●​ Handover Tasks. 
+●​ Calendar and Campaign Information. 
+●​ Quick Actions. 
+3. Reservations 
+●​ Inquiry Logging. 
+●​ Reservation CRUD. 
+●​ Reservation Status. 
+●​ Follow-up. 
+●​ WhatsApp and Phone Logging. 
+4. Guests 
+●​ Guest Profile. 
+●​ Guest Search. 
+●​ Guest History. 
+●​ Guest Classification. 
+●​ Guest Identity Matching. 
+5. Walk-in & Visit 
+●​ Walk-in Input. 
+●​ Arrival. 
+●​ Actual Guest Count. 
+●​ Visit Creation. 
+●​ Visit Completion. 
+6. Shift & Handover 
+●​ Shift Start. 
+
+--- PAGE 29 ---
+●​ Shift Briefing. 
+●​ Open Tasks. 
+●​ Handover Submission. 
+●​ Incoming Handover. 
+●​ Task Ownership. 
+7. Table Management — Operational Foundation 
+●​ Table Configuration. 
+●​ Table Layout. 
+●​ Table Status. 
+●​ Table Assignment. 
+●​ Occupied / Cleaning / Available workflow. 
+8. Daily Closing 
+●​ Operational Summary. 
+●​ Guest Count. 
+●​ Reservation Result. 
+●​ Walk-in Summary. 
+●​ Source Summary. 
+●​ Closing Submission. 
+9. RMIP Integration Foundation 
+●​ Campaign ID Reference. 
+●​ Guest ID. 
+●​ Data Source. 
+●​ Data Provenance. 
+●​ Published Campaign Information. 
+●​ Published Calendar and Event Information. 
+13.2 Deferred Features 
+Tidak termasuk MVP awal: 
+●​ Direct WhatsApp Business API. 
+●​ Automatic phone call recording. 
+●​ POS integration. 
+●​ Payment processing. 
+●​ Financial closing. 
+●​ Advanced table optimization. 
+●​ Advanced table intelligence. 
+●​ AI Guest Intelligence. 
+●​ Loyalty and membership system. 
+
+--- PAGE 30 ---
+●​ Automated marketing campaigns. 
+●​ Advanced workforce scheduling. 
+●​ Advanced multi-touch attribution. 
+●​ Offline synchronization queue. 
+Fitur tersebut dapat dikembangkan pada tahap berikutnya setelah kebutuhan operasional dan 
+penggunaan MVP tervalidasi. 
+ 
+14. NON-FUNCTIONAL REQUIREMENTS 
+14.1 Usability 
+GOS digunakan oleh GRO dalam kondisi operasional yang sibuk. 
+Karena itu: 
+●​ Input harus cepat. 
+●​ Form tidak boleh terlalu panjang. 
+●​ Informasi penting harus mudah ditemukan. 
+●​ Quick Actions harus mudah diakses. 
+●​ Task harus memiliki status yang jelas. 
+●​ Tampilan harus mobile-first. 
+14.2 Accountability 
+Sistem harus memiliki: 
+●​ User-level activity log. 
+●​ Timestamp. 
+●​ Status history. 
+●​ Task ownership history. 
+●​ Handover history. 
+●​ Record modification history. 
+14.3 Multi-Tenancy Foundation 
+Arsitektur harus memisahkan: 
+●​ Organization. 
+●​ Outlet. 
+
+--- PAGE 31 ---
+●​ User. 
+●​ Guest. 
+●​ Reservation. 
+●​ Visit. 
+●​ Table. 
+Data satu organization atau outlet tidak boleh dapat diakses oleh organization atau outlet lain 
+tanpa permission yang sah. 
+14.4 Localization 
+Bahasa Indonesia menjadi bahasa default, dengan dukungan bahasa Inggris. 
+Format tanggal, waktu, dan angka harus mengikuti pengaturan bahasa dan locale. 
+14.5 Privacy & Security 
+●​ Individual user accounts. 
+●​ Role-based permissions. 
+●​ Secure authentication. 
+●​ Guest data protection. 
+●​ Consent management. 
+●​ Audit logs. 
+●​ Data access control. 
+●​ Data correction and deletion. 
+ 
+15. IMPLEMENTATION APPROACH 
+Phase 1 — Operational Foundation 
+Fokus: 
+●​ Authentication. 
+●​ User Identity. 
+●​ Today. 
+●​ Reservation. 
+●​ Inquiry Logging. 
+●​ Guest Profile. 
+●​ Walk-in. 
+
+--- PAGE 32 ---
+●​ Visit. 
+●​ Basic Daily Closing. 
+Tujuan: memastikan data guest dan reservation dapat dicatat dengan benar. 
+Phase 2 — Shift & Operational Continuity 
+Fokus: 
+●​ Shift Management. 
+●​ Shift Briefing. 
+●​ Task Ownership. 
+●​ Handover. 
+●​ Incoming Handover. 
+●​ Activity History. 
+●​ Follow-up Continuity. 
+Tujuan: memastikan pekerjaan dapat dilanjutkan antar-GRO dan antar-shift. 
+Phase 3 — Table Management 
+Fokus: 
+●​ Table Configuration. 
+●​ Visual Table Layout. 
+●​ Table Status. 
+●​ Reservation Assignment. 
+●​ Walk-in Seating. 
+●​ Occupancy History. 
+Tujuan: memberikan visibilitas seating dan kondisi meja secara operasional. 
+Phase 4 — RMIP Integration 
+Fokus: 
+●​ Single Guest Identity. 
+●​ Campaign Synchronization. 
+●​ Calendar and Event Synchronization. 
+●​ Campaign Reference. 
+●​ Guest and Visit Data Synchronization. 
+●​ CRM Data Integration. 
+●​ Operational Reporting. 
+
+--- PAGE 33 ---
+Tujuan: menghubungkan marketing planning dengan guest operations. 
+Phase 5 — Intelligence & Expansion 
+Fokus: 
+●​ Table Intelligence. 
+●​ Guest Intelligence. 
+●​ Advanced CRM. 
+●​ POS Integration. 
+●​ Revenue-linked Reporting. 
+●​ AI Operational Insights. 
+●​ Multi-outlet Expansion. 
+Tujuan: mengubah data operasional menjadi intelligence untuk pengambilan keputusan bisnis. 
+ 
+16. VALIDATION & PILOT 
+Tahap awal validasi sebaiknya dilakukan pada satu restoran dan satu outlet. 
+Durasi uji coba yang disarankan: 4 minggu secara bertahap. 
+Indikator internal awal: 
+●​ ≥80% reservation tercatat di GOS. 
+●​ ≥80% reservation memiliki source. 
+●​ ≥70% reservation terhubung dengan Guest ID jika identitas tersedia. 
+●​ ≥80% daily closing disubmit. 
+●​ Handover tasks dapat dilanjutkan tanpa kehilangan informasi. 
+●​ Table status diperbarui sesuai kondisi aktual. 
+Angka tersebut merupakan target eksperimen awal, bukan standar industri atau komitmen hasil. 
+Evaluasi juga perlu mengukur: 
+●​ Waktu yang diperlukan GRO untuk input data. 
+●​ Jumlah task yang tertunda. 
+●​ Kualitas handover. 
+●​ Akurasi guest identity. 
+●​ Akurasi table status. 
+●​ Kemudahan penggunaan saat restoran ramai. 
+
+--- PAGE 34 ---
+ 
+17. OPEN DESIGN DECISIONS 
+Bagian berikut masih membutuhkan pembahasan dan keputusan lebih lanjut. 
+1.​ Detail login, autentikasi, dan pengelolaan akun. 
+2.​ Shift scheduling dan aturan pergantian shift. 
+3.​ Prosedur jika GRO lupa melakukan handover. 
+4.​ Supervisor override dan escalation. 
+5.​ Task priority dan task reminder. 
+6.​ Task assignment otomatis atau manual. 
+7.​ Aturan ownership ketika beberapa GRO menangani customer yang sama. 
+8.​ Detail Inquiry lifecycle. 
+9.​ Guest duplicate detection dan identity matching. 
+10.​Detail Table Layout Editor. 
+11.​Table combination dan kapasitas meja gabungan. 
+12.​Aturan table reservation dan seating. 
+13.​Table turnover dan cleaning confirmation. 
+14.​Pengukuran Table Utilization. 
+15.​Detail permission setiap role. 
+16.​Sinkronisasi dan penanganan kegagalan integrasi RMIP. 
+17.​Detail consent dan kebijakan penggunaan data customer. 
+18.​POS integration dan revenue verification. 
+Keputusan untuk bagian ini tidak boleh diasumsikan sudah final sebelum dibahas. 
+ 
+18. PRODUCT PRINCIPLES — LOCKED 
+FOUNDATION 
+GOS dibangun berdasarkan prinsip berikut: 
+1. Guest Journey First 
+Setiap aktivitas customer harus dapat dicatat dari inquiry sampai visit. 
+2. Operational Continuity 
+Pekerjaan tidak boleh kehilangan konteks saat terjadi pergantian shift. 
+
+--- PAGE 35 ---
+3. Individual Accountability 
+Setiap user memiliki identitas dan riwayat aktivitas sendiri. 
+4. Data at Point of Interaction 
+Data dicatat sedekat mungkin dengan waktu terjadinya interaksi. 
+5. Fast Operational Workflow 
+GOS harus mudah digunakan ketika restoran sedang sibuk. 
+6. Single Guest Identity 
+Guest ID menjadi identitas bersama GOS dan RMIP. 
+7. Clear Data Ownership 
+GOS mengelola guest operations, RMIP mengelola marketing intelligence, dan POS / Finance 
+mengelola data transaksi serta revenue. 
+8. Independent Core Operation 
+GOS tetap berfungsi tanpa integrasi RMIP atau POS. 
+9. Operational Visibility 
+GRO harus dapat mengetahui kondisi reservation, guest, table, task, dan handover. 
+10. Evidence-Based Intelligence 
+Insight harus berasal dari data aktual dan tervalidasi, bukan asumsi. 
+ 
+19. FINAL PRODUCT DEFINITION 
+GOS adalah Guest Operations System yang membantu restoran mengelola guest journey, 
+reservation, inquiry, visit, walk-in, table operations, daily tasks, serta kesinambungan pekerjaan 
+antar-shift. 
+GOS menjadi pusat pencatatan aktivitas operasional customer dan sumber data guest untuk 
+RMIP. 
+Dengan integrasi RMIP, GOS menghubungkan aktivitas marketing dengan interaksi dan 
+kunjungan customer secara lebih terukur. 
+
+--- PAGE 36 ---
+Dengan pengembangan Table Management, GOS juga memberikan visibilitas terhadap 
+penggunaan ruang dan seating restoran. 
+Core Product Identity: 
+GOS = Guest Operations + Operational Continuity + Table Operations. 
+Core Ecosystem Relationship: 
+RMIP = Marketing Intelligence Layer.​
+GOS = Guest Operations Layer.​
+POS / Finance = Transaction & Revenue Layer. 
+Long-Term Direction: 
+Membangun sistem operasional restoran yang menghubungkan manusia, customer, aktivitas, 
+ruang, dan data bisnis dalam satu ekosistem terintegrasi. 
+ 
+
